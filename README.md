@@ -1,4 +1,3 @@
-````markdown
 # Adeo Technical Test
 
 ## Description
@@ -18,7 +17,6 @@ Clone the repository:
 ```bash
 git clone https://github.com/JulNeel/adeo-technical-test.git
 ```
-````
 
 Install the dependencies:
 
