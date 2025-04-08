@@ -1,90 +1,126 @@
-# Javascript developer test
+````markdown
+# Adeo Technical Test
 
-## Filter
+## Description
 
-Your job is to write a command-line interface in Node.js. 
-This program has to filter a list of elements containing a pattern.
+This project is a technical test for Adeo, developed in Node.js.  
+It includes two main features:
 
-Details:
-- In the following file `data.js`, there are `Countries` containing `Peoples` containing `Animals`.
-- Only animals containing the pattern passed as argument (e.g. `ry`) are displayed. The order should be kept intact.
-- Empty array after filtering are NOT returned.
+- 🔍 **Filter**: filtering data based on animals name
+- 🔢 **Count**: counting people by country and animals by people
 
-Sample of running the command, and its output:
+---
 
-```shell script
-$ node app.js --filter=ry
-[
-  {
-    name: 'Uzuzozne',
-    people: [
-      {
-        name: 'Lillie Abbott',
-        animals: [
-          {
-            name: 'John Dory'
-          }
-        ]
-      }
-    ]
-  },
-  {
-    name: 'Satanwi',
-    people: [
-      {
-        name: 'Anthony Bruno',
-        animals: [
-          {
-            name: 'Oryx'
-          }
-        ]
-      }
-    ]
-  }
-]
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/JulNeel/adeo-technical-test.git
+```
+````
+
+Install the dependencies:
+
+```bash
+npm install
 ```
 
-## Count
+---
 
-The next goal is to print the counts of People and Animals by counting the number of children and appending it in the name, eg. `Satanwi [2]`.
+## Usage
 
-Sample of running the command, and its output:
+The application should be run directly with flags :
 
-```shell script
+### Filter feature
+
+```bash
+node app.js --filter <string>
+```
+
+or
+
+```bash
+node app.js --filter=<string>
+```
+
+### Count feature
+
+```bash
 node app.js --count
-[ { name: 'Dillauti [5]',
-    people:
-     [ { name: 'Winifred Graham [6]',
-         animals:
-          [ { name: 'Anoa' },
-            { name: 'Duck' },
-            { name: 'Narwhal' },
-            { name: 'Badger' },
-            { name: 'Cobra' },
-            { name: 'Crow' } ] },
-       { name: 'Blanche Viciani [8]',
-         animals:
-          [ { name: 'Barbet' },
-            { name: 'Rhea' },
-            { name: 'Snakes' },
-            { name: 'Antelope' },
-            { name: 'Echidna' },
-            { name: 'Crow' },
-            { name: 'Guinea Fowl' },
-            { name: 'Deer Mouse' } ] },
-      ...
-...
-]
 ```
 
-## Requirements
+### Both features
 
-- The code must be available in a GIT repository
-- No library/modules should be used, except for the testing library
+```bash
+node app.js --count --filter=<string>
+```
 
-## Appreciation
+Depending on your needs, you can use various options to filter or count data.
 
-We will be really attentive to:
+> 💡 For more information on available arguments, add `--help`.
 
-- Code readability, structure and consistency
-- Tests, and how they are written
+---
+
+## Examples
+
+### Filtering Data
+
+```bash
+myapp filter --key age --value 30
+```
+
+### Counting Items
+
+```bash
+myapp count --group-by city
+```
+
+---
+
+## Available Scripts
+
+### Run tests:
+
+```bash
+npm test
+```
+
+The tests are written using **Vitest**.
+
+---
+
+## Project Structure
+
+```
+.
+├── app.js          # Main entry point
+├── lib/            # Contains the filter and count functions
+├── tests/          # Unit tests
+├── package.json    # Project configuration
+└── README.md       # Documentation
+```
+
+---
+
+## Author
+
+Julien Bruneel
+
+---
+
+## Useful Links
+
+- 🐛 [Bug Tracker](https://github.com/JulNeel/adeo-technical-test/issues)
+- 🏠 [Project Homepage](https://github.com/JulNeel/adeo-technical-test#readme)
+- 📦 [GitHub Repository](https://github.com/JulNeel/adeo-technical-test)
+
+---
+
+## License
+
+This project is licensed under the **MIT** License.
+
+```
+
+```
