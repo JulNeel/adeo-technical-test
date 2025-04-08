@@ -93,9 +93,12 @@ The tests are written using **Vitest**.
 ```
 .
 ├── app.js          # Main entry point
-├── lib/            # Contains the filter and count functions
-├── tests/          # Unit tests
+├── app.spec.js     # Non regression test
+├── commands/       # Contains the filter and count functions
+├── utils/          # utils
 ├── package.json    # Project configuration
+├── data.fixture.js # data for tests
+├── .gitignore
 └── README.md       # Documentation
 ```
 
